@@ -1,0 +1,32 @@
+{
+  "name": "@deepguard/fee-distribution-analyzer",
+  "version": "1.0.0",
+  "description": "Tracks how protocol fees flow to stakers, LPs, treasury, and burn mechanisms",
+  "main": "dist/index.js",
+  "bin": {
+    "fee-analyzer": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "clean": "rm -rf dist"
+  },
+  "keywords": ["web3", "defi", "fees", "analytics", "treasury", "protocol"],
+  "author": "Deep Guard <getaudited@deepguard.xyz>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0",
+    "ethers": "^6.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

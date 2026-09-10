@@ -1,0 +1,23 @@
+{
+  "protocolName": "My Protocol — Ratio Split",
+  "rpc": "https://mainnet.infura.io/v3/YOUR_KEY_HERE",
+  "startBlock": 18000000,
+  "feeRatios": [
+    {
+      "label": "Protocol fee",
+      "contractAddress": "0xYOUR_FEE_CONTRACT_ADDRESS",
+      "eventSignature": "FeeCollected(address indexed token, uint256 totalAmount)",
+      "totalAmountArgName": "totalAmount",
+      "tokenAddress": "native",
+      "tokenSymbol": "ETH",
+      "tokenCoingeckoId": "ethereum",
+      "tokenDecimals": 18,
+      "splits": [
+        { "recipient": "Treasury", "share": 0.30 },
+        { "recipient": "Stakers",  "share": 0.50 },
+        { "recipient": "Burn",     "share": 0.20 }
+      ]
+    }
+  ],
+  "outputDir": "./reports"
+}
